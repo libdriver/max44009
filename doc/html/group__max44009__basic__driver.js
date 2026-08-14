@@ -1,0 +1,71 @@
+var group__max44009__basic__driver =
+[
+    [ "max44009_handle_s", "structmax44009__handle__s.html", [
+      [ "debug_print", "structmax44009__handle__s.html#a769d5b3a6c14790a0e126e8fe70b384b", null ],
+      [ "delay_ms", "structmax44009__handle__s.html#a406c9433252b7366de417b7a60915c81", null ],
+      [ "iic_addr", "structmax44009__handle__s.html#ae4fb63dc1b166464d5da3aa753b0805a", null ],
+      [ "iic_deinit", "structmax44009__handle__s.html#af6963bbad902ca6e43942b48c07986c3", null ],
+      [ "iic_init", "structmax44009__handle__s.html#a8826dd07625f8d90859ce9bd09628d61", null ],
+      [ "iic_read", "structmax44009__handle__s.html#af4ef726288b88f51a846483803a1249b", null ],
+      [ "iic_write", "structmax44009__handle__s.html#adca3ee7a793bbf510d5267daf0fcf1c5", null ],
+      [ "inited", "structmax44009__handle__s.html#a19bedf28d2b9748f6a62d9ae93f4e68f", null ]
+    ] ],
+    [ "max44009_info_s", "structmax44009__info__s.html", [
+      [ "chip_name", "structmax44009__info__s.html#af890958c72bd715cc6454a10dc846ae6", null ],
+      [ "driver_version", "structmax44009__info__s.html#a41b0bd442708b70d252c50b92c75265a", null ],
+      [ "interface", "structmax44009__info__s.html#aebaa6c28dd4f2c3dc27566fcb910fd28", null ],
+      [ "manufacturer_name", "structmax44009__info__s.html#ad25285dbf810c90f8eaf3fcef6f2b2ea", null ],
+      [ "max_current_ma", "structmax44009__info__s.html#a9db82802561bf22d799b03a345f1d1dc", null ],
+      [ "supply_voltage_max_v", "structmax44009__info__s.html#a3d2b12bcac7a85ea8646bff9debe8660", null ],
+      [ "supply_voltage_min_v", "structmax44009__info__s.html#ad8bde6ddadaf43d951e62f3befb9d35a", null ],
+      [ "temperature_max", "structmax44009__info__s.html#a3366a5dce9b829e03c3d321c2b4df3f6", null ],
+      [ "temperature_min", "structmax44009__info__s.html#a8f9dbe66ac0b66ebae0a36fcb4ba368e", null ]
+    ] ],
+    [ "max44009_handle_t", "group__max44009__basic__driver.html#ga7069cf8f5da3b5e7af48c9f85b5775d2", null ],
+    [ "max44009_info_t", "group__max44009__basic__driver.html#gab1aa4274047c554218683e217d50a21b", null ],
+    [ "max44009_address_t", "group__max44009__basic__driver.html#gad1ca2ef8bd7c8337119bb205f7b1b7e3", [
+      [ "MAX44009_ADDRESS_0", "group__max44009__basic__driver.html#ggad1ca2ef8bd7c8337119bb205f7b1b7e3a3998c13bdd6d78489f1f603e03d8ef92", null ],
+      [ "MAX44009_ADDRESS_1", "group__max44009__basic__driver.html#ggad1ca2ef8bd7c8337119bb205f7b1b7e3a5d5edc58af982dee425c191e0a0b646d", null ]
+    ] ],
+    [ "max44009_bool_t", "group__max44009__basic__driver.html#gaf6b84a79a6809e386e1b41c28b16dd20", [
+      [ "MAX44009_BOOL_FALSE", "group__max44009__basic__driver.html#ggaf6b84a79a6809e386e1b41c28b16dd20ad98c8abe44aab49c845b3a4c93f8ec11", null ],
+      [ "MAX44009_BOOL_TRUE", "group__max44009__basic__driver.html#ggaf6b84a79a6809e386e1b41c28b16dd20ab38a4493c0f48858e1e94aa6675ff927", null ]
+    ] ],
+    [ "max44009_integration_time_t", "group__max44009__basic__driver.html#ga2c667368a9aefd0d74fb1c1c1e252750", [
+      [ "MAX44009_INTEGRATION_TIME_800MS", "group__max44009__basic__driver.html#gga2c667368a9aefd0d74fb1c1c1e252750a7d3bf93e3a13371f5570a52a75e94996", null ],
+      [ "MAX44009_INTEGRATION_TIME_400MS", "group__max44009__basic__driver.html#gga2c667368a9aefd0d74fb1c1c1e252750a44fcfba7f25631b50964ede3b37c579d", null ],
+      [ "MAX44009_INTEGRATION_TIME_200MS", "group__max44009__basic__driver.html#gga2c667368a9aefd0d74fb1c1c1e252750a6ed093b40aa3ceb5515c25060e34aed5", null ],
+      [ "MAX44009_INTEGRATION_TIME_100MS", "group__max44009__basic__driver.html#gga2c667368a9aefd0d74fb1c1c1e252750a7a7b89e1c874bb51b7bfbc61b08119ad", null ],
+      [ "MAX44009_INTEGRATION_TIME_50MS", "group__max44009__basic__driver.html#gga2c667368a9aefd0d74fb1c1c1e252750aa3691f559ff6c32a5bca8be6b57b0e83", null ],
+      [ "MAX44009_INTEGRATION_TIME_25MS", "group__max44009__basic__driver.html#gga2c667368a9aefd0d74fb1c1c1e252750ad657dd51287bfc8fcd45a6891604a598", null ],
+      [ "MAX44009_INTEGRATION_TIME_12P5MS", "group__max44009__basic__driver.html#gga2c667368a9aefd0d74fb1c1c1e252750a4ded1bf006a45dc8b36e383d5d634227", null ],
+      [ "MAX44009_INTEGRATION_TIME_6P25MS", "group__max44009__basic__driver.html#gga2c667368a9aefd0d74fb1c1c1e252750a9224e2a39d511643f996bb9f39711a3f", null ]
+    ] ],
+    [ "max44009_deinit", "group__max44009__basic__driver.html#gadb7a3c8217dfc4b3e56c316b1418cbc5", null ],
+    [ "max44009_get_addr_pin", "group__max44009__basic__driver.html#ga6bd6065f514873372cc754317c0b3ca4", null ],
+    [ "max44009_get_auto_range", "group__max44009__basic__driver.html#ga7f5a873ae9b8a4d2c0eab9dc57d1b224", null ],
+    [ "max44009_get_continuous_mode", "group__max44009__basic__driver.html#gac5792e0f8f87495debcf2ca42ceba0d4", null ],
+    [ "max44009_get_current_div_8", "group__max44009__basic__driver.html#ga1974810c8fad9274b6a34265bb664f50", null ],
+    [ "max44009_get_integration_time", "group__max44009__basic__driver.html#gad42abb64684bfbef90d68c3675381c6d", null ],
+    [ "max44009_get_interrupt", "group__max44009__basic__driver.html#ga2503d35d6a3f6e5d593b0fcce4a24674", null ],
+    [ "max44009_get_interrupt_high_threshold", "group__max44009__basic__driver.html#ga65c9ba4d14e0a40f677741fa474126b7", null ],
+    [ "max44009_get_interrupt_low_threshold", "group__max44009__basic__driver.html#gae3e9f770eebb0edd4e2cb08759967535", null ],
+    [ "max44009_get_interrupt_status", "group__max44009__basic__driver.html#ga4f0ba403de6b4fd71188a28ca3fa10ec", null ],
+    [ "max44009_get_threshold_timer", "group__max44009__basic__driver.html#ga891c2d89b630d3b25ab3a67f2c9c03a9", null ],
+    [ "max44009_info", "group__max44009__basic__driver.html#ga9daecd630509ef8cdc17dc673a90c027", null ],
+    [ "max44009_init", "group__max44009__basic__driver.html#gadf9ac9de64e60c112015595cc42c80ca", null ],
+    [ "max44009_read", "group__max44009__basic__driver.html#ga1fd844f7c582e563a92bf8ad9cec3eb0", null ],
+    [ "max44009_set_addr_pin", "group__max44009__basic__driver.html#ga887d6613240b10cff56284cfff0b64dc", null ],
+    [ "max44009_set_auto_range", "group__max44009__basic__driver.html#gae8118f4610aa0e59b014be2a27433447", null ],
+    [ "max44009_set_continuous_mode", "group__max44009__basic__driver.html#gac154147c8fa3bb1321553ffa04849e5b", null ],
+    [ "max44009_set_current_div_8", "group__max44009__basic__driver.html#ga33fb5a64535dc76bbdc4e82c12e3ef1f", null ],
+    [ "max44009_set_integration_time", "group__max44009__basic__driver.html#ga21309391718c18ef69831db5ff2d900d", null ],
+    [ "max44009_set_interrupt", "group__max44009__basic__driver.html#gad3d313f2f8ea15afe38e03eed1af1e5a", null ],
+    [ "max44009_set_interrupt_high_threshold", "group__max44009__basic__driver.html#ga6272b772973a46a7116523320d0b33bc", null ],
+    [ "max44009_set_interrupt_low_threshold", "group__max44009__basic__driver.html#ga97caad1e3b9fa91abb3f518b01171098", null ],
+    [ "max44009_set_threshold_timer", "group__max44009__basic__driver.html#gae8aaca92b1fa2ccbdc885e5d09db3164", null ],
+    [ "max44009_threshold_convert_to_data", "group__max44009__basic__driver.html#gad32c616967283a3ea8e514e2540f760b", null ],
+    [ "max44009_threshold_convert_to_register", "group__max44009__basic__driver.html#ga7cb202813ea0447b1cfd144c5ba65a5c", null ],
+    [ "max44009_timer_convert_to_data", "group__max44009__basic__driver.html#ga2eb11c7baeb637715e5a68602160930a", null ],
+    [ "max44009_timer_convert_to_register", "group__max44009__basic__driver.html#gaf98abbdb6532eaf149dad91dc07b4ec2", null ]
+];

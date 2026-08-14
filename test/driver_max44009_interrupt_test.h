@@ -1,0 +1,72 @@
+/**
+ * Copyright (c) 2015 - present LibDriver All rights reserved
+ * 
+ * The MIT License (MIT)
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE. 
+ *
+ * @file      driver_max44009_interrupt_test.h
+ * @brief     driver max44009 interrupt test header file
+ * @version   1.0.0
+ * @author    Shifeng Li
+ * @date      2026-09-30
+ *
+ * <h3>history</h3>
+ * <table>
+ * <tr><th>Date        <th>Version  <th>Author      <th>Description
+ * <tr><td>2026/09/30  <td>1.0      <td>Shifeng Li  <td>first upload
+ * </table>
+ */
+
+#ifndef DRIVER_MAX44009_INTERRUPT_TEST_H
+#define DRIVER_MAX44009_INTERRUPT_TEST_H
+
+#include "driver_max44009_interface.h"
+
+#ifdef __cplusplus
+extern "C"{
+#endif
+
+/**
+ * @addtogroup max44009_test_driver
+ * @{
+ */
+
+/**
+ * @brief     interrupt test
+ * @param[in] addr iic device address
+ * @param[in] low_threshold_lux low threshold in lux
+ * @param[in] high_threshold_lux high threshold in lux
+ * @param[in] times test times
+ * @return    status code
+ *            - 0 success
+ *            - 1 test failed
+ * @note      none
+ */
+uint8_t max44009_interrupt_test(max44009_address_t addr, float low_threshold_lux, float high_threshold_lux, uint32_t times);
+
+/**
+ * @}
+ */
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

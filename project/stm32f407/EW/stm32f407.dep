@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>5</fileVersion>
+    <fileChecksum>1919357424</fileChecksum>
+    <configuration>
+        <name>Release</name>
+        <outputs>
+            <file>$PROJ_DIR$\..\..\..\example\driver_max44009_interrupt.c</file>
+            <file>$PROJ_DIR$\..\..\..\test\driver_max44009_read_test.c</file>
+            <file>$PROJ_DIR$\..\..\..\src\driver_max44009.c</file>
+            <file>$PROJ_DIR$\..\..\..\example\driver_max44009_basic.c</file>
+            <file>$PROJ_DIR$\..\..\..\test\driver_max44009_interrupt_test.c</file>
+            <file>$PROJ_DIR$\..\..\..\test\driver_max44009_register_test.c</file>
+            <file>$PROJ_DIR$\..\driver\src\stm32f407_driver_max44009_interface.c</file>
+        </outputs>
+        <forcedrebuild>
+            <name>[REBUILD_ALL]</name>
+        </forcedrebuild>
+    </configuration>
+</project>
