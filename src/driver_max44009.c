@@ -827,40 +827,52 @@ uint8_t max44009_get_threshold_timer(max44009_handle_t *handle, uint8_t *t)
  */
 uint8_t max44009_threshold_convert_to_register(max44009_handle_t *handle, float lux, uint8_t *reg)
 {
-    uint16_t remain;
-    int xp;
+    uint8_t exponent;
+    uint8_t nibble;
     float f;
-    float fraction;
-    
-    if (handle == NULL)                                           /* check handle */
+
+    if (handle == NULL)                                            /* check handle */
     {
-        return 2;                                                 /* return error */
+        return 2;                                                  /* return error */
     }
-    if (handle->inited != 1)                                      /* check handle initialization */
+    if (handle->inited != 1)                                       /* check handle initialization */
     {
-        return 3;                                                 /* return error */
+        return 3;                                                  /* return error */
     }
-    
-    f = lux / 0.045f;                                             /* convert */
-    fraction = frexpf(f, &xp);                                    /* run frexp */
-    while ((xp > 0xF) || (fraction < 240.0f))                     /* adjust params */
+
+    if (lux <= 0.0f)                                               /* check non-positive input */
     {
-        if (xp == 0)                                              /* reach the min */
-        {
-            break;                                                /* break */
-        }
-        if (fraction * 2.0f > 240.0f)                             /* reach the max */
-        {
-            break;                                                /* break */
-        }
-        xp--;                                                     /* xp-- */
-        fraction *= 2.0f;                                         /* fraction * 2 */
+        *reg = 0x00;                                               /* set the minimum threshold */
+
+        return 0;                                                  /* success return 0 */
     }
-    remain = (uint8_t)fraction;                                   /* get the integer part */
-    remain >>= 4;                                                 /* right shift */
-    *reg = (((uint8_t)(xp & 0xF)) << 4) | (remain & 0x0F);        /* convert real data to register data */
-    
-    return 0;                                                     /* success return 0 */
+
+    f = lux / 0.045f;                                              /* f = 2^exponent x mantissa, mantissa = nibble x 16 */
+    if (f < 8.0f)                                                  /* below half the smallest nonzero code */
+    {
+        *reg = 0x00;                                               /* set the minimum threshold */
+
+        return 0;                                                  /* success return 0 */
+    }
+    exponent = 0;                                                  /* initialize the exponent */
+    while ((f >= 256.0f) && (exponent < 14))                       /* normalize mantissa into [128, 256) */
+    {
+        f /= 2.0f;                                                 /* divide by 2 */
+        exponent++;                                                /* exponent++ */
+    }
+    nibble = (uint8_t)(f / 16.0f + 0.5f);                          /* round to the nearest multiple of 16 */
+    if ((nibble == 16) && (exponent < 14))                         /* carry the rounded overflow */
+    {
+        nibble = 8;                                                /* set the mantissa nibble */
+        exponent++;                                                /* exponent++ */
+    }
+    if (nibble > 15)                                               /* clamp to the max usable code */
+    {
+        nibble = 15;                                               /* mantissa max = 240, exponent max = 14 */
+    }
+    *reg = (uint8_t)(((exponent & 0x0F) << 4) | (nibble & 0x0F));  /* convert real data to register data */
+
+    return 0;                                                      /* success return 0 */
 }
 
 /**
